@@ -1,5 +1,6 @@
 function criptografa(frase){
     //Ajusta texto antes de descriptografar
+    frase = frase.toLowerCase()
     frase = ajustaTexto(frase);
     const mapaCriptografia = {
         'e': 'enter',
@@ -28,6 +29,7 @@ function criptografa(frase){
 
 function desCriptografa(fraseCripto){
     //Ajusta texto antes de descriptografar
+    fraseCripto = fraseCripto.toLowerCase()
     fraseCripto = ajustaTexto(fraseCripto);
     const mapaDescriptografia = {
         'enter': 'e',
