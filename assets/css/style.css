@@ -1,0 +1,421 @@
+*{
+    box-sizing: border-box;
+    color: var(--cor-primaria);
+    fill: var(--cor-primaria);
+    -webkit-transition: .6s;
+    transition: .6s;
+}
+
+html{
+    height: 100%;
+}
+
+
+:root {
+    --cor-fundo: #00000017;
+    --cor-primaria: #1d0a71;
+    --cor-secundaria: #D8DFE8;
+    --cor-terciaria: rgb(255, 255, 255);
+    --cor-trans: #f0f8ff00;
+}
+
+
+body{
+    background-color: var(--cor-fundo);
+    height: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border: 0.1rem solid;
+    border-top-right-radius: 0.5rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    text-align: center;
+    margin: 0.2% 0 0 0;
+    padding: 0.5% 1% 0.5% 1%;
+}
+
+.texto_footer{
+    color: var(--cor-terciaria);
+}
+
+.frase_aviso{
+    display: flex;
+    align-items: center;
+    gap: 0.5vh;
+    margin-bottom: 1%;
+}
+
+.principal{
+    margin: 0 1% 0 3%;
+    height: 100%;
+}
+
+.w-100{
+    width: 100%;
+}
+.w-12{
+    width: 12%;
+    filter: grayscale(1);
+}
+.w-16{
+    width: 16%;
+    filter: grayscale(1);
+}
+
+
+.input_texto{
+    width: 100%;
+    background-color: var(--cor-trans);
+    border-color: var(--cor-trans);
+    font-size: xx-large;
+    color: var(--cor-primaria);
+    height: 50%;
+}
+
+.btn{
+    padding: 2.5%;
+    text-align: center;
+    border-radius: 1rem;
+    width: 48%;
+    border: 0.1rem solid;
+    cursor: pointer;
+}
+
+.conjunto_botoes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_Criptografar{
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.btn_Descriptografar{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    border: 0.1rem solid;
+    border-color: var(--cor-primaria);
+}
+
+.direita{
+    background-color: white;
+    padding: 5%;
+    border-radius: 2rem;
+    height: 86%;
+    width: 40%;
+}
+
+.direita p{
+    height: 95%;
+    margin: 0%;
+    overflow-y: scroll;
+}
+
+.esquerda{
+    width: 60%;
+    padding: 0 0 0 3%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.link_footer{
+    color: var(--cor-terciaria) !important;
+    text-decoration: none;
+}
+
+.contato{
+    display: flex;
+    gap: 3%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo_alura{
+    width: 7%;
+    height: 7%;
+}
+
+
+
+textarea:focus-visible {
+    outline: none;
+}
+
+
+.modo{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    text-wrap: nowrap;
+    width: 26%;
+}
+
+.mensagem_vazia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: -webkit-fill-available;
+    text-align: center;
+}
+.imagem_vazia{
+    width: 60%;
+    filter: hue-rotate(45deg);
+}
+
+
+::placeholder {
+    color: var(--cor-primaria);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: var(--cor-primaria);
+    opacity: 1;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: var(--cor-primaria);
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: var(--cor-primaria);
+}
+
+
+/* switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.7rem;
+}
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.2rem;
+    width: 1.2rem;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: var(--cor-primaria);
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--cor-primaria);
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/* Alerta */
+.alerta-escondido {
+    display: none;
+}
+
+#alertaPersonalizado {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border: 1px solid #000;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    z-index: 1000; /* Certifique-se que está sobre outros elementos */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+#alertaPersonalizado button {
+    float: right;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#mensagemModificada > button{
+    width: 100%;
+    margin-top: 10%;
+}
+
+
+
+
+/* Personaliza a barra de rolagem para todos os elementos da página */
+* {
+    scrollbar-width: thin; /* Para Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Para Firefox */
+  }
+  
+  /* Personaliza a barra de rolagem para WebKit (Chrome, Edge, etc.) */
+  *::-webkit-scrollbar {
+    width: 2px; /* Largura da barra de rolagem */
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent; /* Cor de fundo da trilha da barra de rolagem */
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor da barra de rolagem */
+    border-radius: 6px; /* Arredondamento das bordas da barra de rolagem */
+    border: 3px solid transparent; /* Espaço entre a barra de rolagem e a borda */
+  }
+
+  @media (min-width: 459px) and (max-width: 768px){
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 4%;
+    }
+
+    .principal{
+        width: 100%;
+        padding: 4% 2%;
+        height: auto;
+    }
+
+    .imagem_vazia{
+        display: none;
+    }
+
+    .direita{
+        width: 96% !important;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5%;
+        flex-direction: column;
+        max-height: 18rem;
+    }
+
+    .esquerda{
+        height: inherit;
+    }
+
+    #mensagemModificada > button {
+        margin-top: 2%;
+    }
+
+    .input_texto {
+        height: 74%;
+    }
+
+    .modo {
+        width: 40%;
+    }
+  }
+
+  @media (max-width: 460px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 4%;
+        justify-content: center;
+    }
+
+    .logo_alura {
+        width: 14%;
+        height: 14%;
+    }
+
+    .modo {
+        width: 70%;
+    }
+
+    .principal{
+        width: 100%;
+        padding: 4% 2%;
+        height: auto;
+    }
+
+    .esquerda{
+        height: 50%;
+    }
+
+    .imagem_vazia{
+        display: none;
+    }
+
+    #mensagemModificada > button {
+        margin-top: 2%;
+    }
+
+    .input_texto {
+        height: 74%;
+        min-width: max-content;
+    }
+
+    .conjunto_botoes {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .btn {
+        width: 100%;
+    }
+
+    .direita p {
+        height: 70%;
+        margin: 2%;
+        overflow-y: scroll;
+    }
+    .direita{
+        height: 12rem;
+    }
+  }
